@@ -100,7 +100,7 @@ while True:
         board = ['#','1','2','3','4','5','6','7','8','9']
         while True:
             print_board(board)
-
+            player_one(board)
             if check_win(board, 'X'):
                 print_board(board)
                 print('You win!')
@@ -115,16 +115,12 @@ while True:
                 print('Tie.')
                 play_again()
                 break
-
-            player_one(board)
             comp(board)
 
     else:
         # 2 Players
         board = ['#','1','2','3','4','5','6','7','8','9']
         while True:
-            print_board(board)
-
             if check_win(board, 'X'):
                 print_board(board)
                 print('Player one wins!')
@@ -139,9 +135,11 @@ while True:
                 print('Tie.')
                 play_again()
                 break
-                        
+            print_board(board)        
             player_one(board)
+            print_board(board)
             player_two(board)
 
     if again == 'n':
+        print('Thanks for playing.')
         break
